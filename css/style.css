@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+main {
+    background-color: #29235c;
+}
+
 header {
     color: #ffffff;
     display: flex;
@@ -11,13 +15,19 @@ header {
     width: 100%;
     height: 100px;
     background-color: #10151A;
-    font-family: "Montserrat", sans-serif;
-
 }
 
-main {
-    width: 100%;
-     height: 76.2vh; 
+@font-face {
+  font-family: 'FiftiesMovies';
+  src: url('../font/Fifties-Movies.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  font-family: 'FiftiesMovies', sans-serif;
+  color: #ffffff;
 }
 
 nav {
@@ -26,15 +36,36 @@ nav {
     align-items: center;
     height: 100px;
     display: flex;
-    width: 75%;
-    gap: 30px;
-
-
+    width: 90%;
+    gap: 150px;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
+}
+
+.underline-hover-btn {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.underline-hover-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-out;
+}
+
+.underline-hover-btn:hover::after {
+    width: 100%;
 }
 
 .logo {
@@ -43,10 +74,12 @@ nav a {
     display: flex;
     align-items: center;
     padding: 10px 0px 0px 20px;
-
 }
 
-
+.first-game {
+    height: 600px;
+    padding: 75px;
+}
 
 footer {
     color: #ffffff;
@@ -54,5 +87,4 @@ footer {
     width: 100%;
     height: 100px;
     background-color: #10151A;
-
 }
