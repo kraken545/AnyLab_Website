@@ -91,6 +91,8 @@ footer a:hover {
 }
 
 .first-game {
+    display: flex;
+    justify-content: space-evenly;
     height: 400px;
     padding: 6%;
 }
@@ -132,8 +134,14 @@ footer a:hover {
 .picture-first-game img {
     border-radius: 10px;
     outline: #10151A solid 2px;
-    height: 90%;
+    height: 100%;
     width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.2s ease;
+}
+
+.picture-first-game img:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0px #000;
 }
 
 footer {
@@ -208,7 +216,7 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     border: 1px solid #333;
-    transition: all 0.6s ease;
+    transition: all 0.5s ease-in;
     font-size: 0.9rem;
     text-align: center;
 }
@@ -216,6 +224,7 @@ footer {
 .social-btn:hover {
     background-color: #ffffff;
     color: #10151A;
+    transition: ease-in-out 0.3s;
     transform: translateY(-5px);
     border-color: #ffffff;
 }
@@ -360,6 +369,7 @@ input {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    gap: 5px;
 }
 
 .active,
@@ -389,6 +399,10 @@ input {
     transform: rotate(180deg);
 }
 
+.download{
+    gap: 40px;
+}
+
 .content-box-one {
     padding: 20px;
     margin-top: 20px;
@@ -398,6 +412,7 @@ input {
     width: 40%;
     background-color: #A6D5EE;
     border-radius: 20px;
+    text-align: center;
 }
 
 .content-box-two {
@@ -409,6 +424,7 @@ input {
     width: 40%;
     background-color: #A6D5EE;
     border-radius: 20px;
+    text-align: center;
 }
 
 .content-box-three {
@@ -420,6 +436,7 @@ input {
     width: 40%;
     background-color: #A6D5EE;
     border-radius: 20px;
+    text-align: center;
 }
 
 .content-box-one,
@@ -435,4 +452,25 @@ input {
 .content-box-three:hover {
     transform: translateY(-5px);
     box-shadow: 5px 5px 0px #000;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.trailer{
+    display: flex;
+    justify-self: flex-end;
+    padding: 20px 6% 6% 6%;
+    text-align: end;
+}
+
+.trailer-video{
+    height: 500px;
+    width: 700px;
 }
